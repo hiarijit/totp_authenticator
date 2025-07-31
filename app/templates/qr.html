@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Scan this QR Code in your Authenticator App</h2>
+  <img src="data:image/png;base64,{{ qr_data }}" alt="TOTP QR Code"><br><br>
+  <a href="{{ url_for('main.verify') }}"><button>Continue to Verification</button></a>
+{% endblock %}

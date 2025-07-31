@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Enter the 6-digit Code from your Authenticator</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <label>{{ form.token.label }}</label>
+    {{ form.token(size=6) }}<br><br>
+    {{ form.submit() }}
+  </form>
+{% endblock %}

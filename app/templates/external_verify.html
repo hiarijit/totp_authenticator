@@ -1,0 +1,8 @@
+<h2>Two-Factor Authentication</h2>
+<p>Verifying user: <strong>{{ username }}</strong></p>
+<form method="post">
+    {{ form.hidden_tag() }}
+    {{ form.token.label }} {{ form.token(size=6) }}
+    <br><br>
+    {{ form.submit(class="btn btn-primary") }}
+</form>
